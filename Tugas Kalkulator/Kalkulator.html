@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalculator Simple</title>
+    <script>
+        function Add(id, angka1, angka2) {
+            document.getElementById(id).value = Number(angka1) + Number(angka2);
+        }
+        function Sub(id, angka1, angka2) {
+            document.getElementById(id).value = Number(angka1) - Number(angka2);
+        }
+        function multiply(id, angka1, angka2) {
+            document.getElementById(id).value = Number(angka1) * Number(angka2);
+        }
+        function division(id, angka1, angka2) {
+            document.getElementById(id).value = Number(angka1) / Number(angka2);
+        }
+    </script>
+</head>
+
+<body>
+    Angka 1 <input type="text" id="input1" /> 
+    Angka 2 <input type="text" id="input2" /> 
+    Jawaban <input type="text" id="result" /> 
+    <br><br>
+    <button type="button"
+        onclick='Add("result", document.getElementById("input1").value , document.getElementById("input2").value)' style="width: 50px; height: 50px;">+</button>
+    <button type="button"
+        onclick='Sub("result", document.getElementById("input1").value , document.getElementById("input2").value)' style="width: 50px; height: 50px;">-</button>
+    <button type="button"
+        onclick='multiply("result", document.getElementById("input1").value , document.getElementById("input2").value)' style="width: 50px; height: 50px;">x</button>      
+    <button type="button"
+        onclick='division("result", document.getElementById("input1").value , document.getElementById("input2").value)' style="width: 50px; height: 50px;">/</button>  
+</body>
+</html>
