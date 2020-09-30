@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konversi angka ke huruf</title>
+    <script>
+        function convertNumber(angka) {
+            if (angka.length > 3 || angka == "" || angka < 0) {
+                alert("Tolong masukkan angka dari 0 sampai 100.");
+            } 
+            else if (angka >= 0 && angka <= 40) {
+                document.getElementById("oResult").innerHTML = "Di konversi: E";
+            } 
+            else if (angka >= 41 && angka <= 55) {
+                document.getElementById("oResult").innerHTML = "Di konversi: D";
+            } 
+            else if (angka >= 56 && angka <= 70) {
+                document.getElementById("oResult").innerHTML = "Di konversi: C";
+            } 
+            else if (angka >= 71 && angka <= 80) {
+                document.getElementById("oResult").innerHTML = "Di konversi: B";
+            } 
+            else if (angka >= 81 && angka <= 100) {
+                document.getElementById("oResult").innerHTML = "Di konversi: A";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="input" placeholder="Masukkan angka yang ingin di Konversi" style="width: 300px;">
+    <button type="button" onclick='convertNumber(document.getElementById("input").value)'>Konvert</button> <br>
+    <p id="oResult">Konversi</p>
+</body>
+</html>
